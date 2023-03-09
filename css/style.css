@@ -203,6 +203,7 @@ body {
 
 .form-field {
   position: relative;
+  height: 40px;
 }
 
 select {
@@ -218,7 +219,8 @@ select {
   position: relative;
   background-image: url(/img/arrow.svg);
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: right top 6px;
+  padding: 0;
   font-size: 14px;
   line-height: 16px;
   color: #111111;
@@ -298,4 +300,103 @@ input {
 }
 .login-link:hover {
   color: #4f54ce;
+}
+
+@media screen and (max-width: 660px) {
+  .wrapper {
+    padding: 8px;
+  }
+  .input_style,
+#nationality {
+    width: 200px;
+  }
+  .form__title {
+    max-width: 90px;
+  }
+  .form__item {
+    width: 200px;
+  }
+  #year {
+    width: 50px;
+  }
+  #day {
+    width: 40px;
+  }
+  #month {
+    left: 46px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .wrapper {
+    max-width: 500px;
+  }
+  .form__items {
+    flex-direction: column;
+  }
+  .input_style,
+#nationality,
+.form__item {
+    width: 300px;
+  }
+  .form-field {
+    margin-bottom: 16px;
+  }
+  #month {
+    left: 90px;
+    width: 94px;
+  }
+  #year {
+    width: 94px;
+  }
+  #day {
+    width: 64px;
+  }
+  .form-complete {
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 40px;
+  }
+  .form-complete .signup_btn {
+    order: -1;
+  }
+}
+@media screen and (max-width: 520px) {
+  .wrapper {
+    max-width: 460px;
+  }
+  .input_style,
+#nationality,
+.form__item {
+    width: 240px;
+  }
+  #day {
+    width: 40px;
+  }
+  #month {
+    left: 60px;
+    width: 90px;
+  }
+  #year {
+    width: 60px;
+  }
+  .form__inner-subtitle {
+    white-space: normal;
+  }
+}
+@media screen and (max-width: 440px) {
+  .wrapper {
+    max-width: 400px;
+  }
+  .form {
+    padding-top: 16px;
+  }
+  .form__title {
+    min-width: 60px;
+  }
+  .form__inner {
+    padding: 20px 10px 20px;
+  }
+  .form-complete {
+    padding-top: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */

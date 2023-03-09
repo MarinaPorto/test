@@ -35,12 +35,15 @@
               </div>
             </div>
             <div class="form__items">
-              <div class="form__item form-field">
-                <label for="firstName" class="field-nationality">Nationality</label>
-                <select id="nationality" onmousedown="if(this.options.length>8){this.size=6;}" onchange='this.size=0;'
-                  onblur="this.size=0;">
-                  <option value="---" disabled selected>---</option>
-                </select>
+              <div class="form__item">
+                <div class="form-field">
+                  <label for="firstName" class="field-nationality">Nationality</label>
+                  <select id="nationality" onmousedown="if(this.options.length>8){this.size=6;this.style.zIndex='50'}"
+                    onchange='this.size=0;' onblur="this.size=0;">
+                    <option value="---" disabled selected>---</option>
+                  </select>
+                </div>
+
               </div>
               <div class="form__item">
                 <label for="email">E-mail</label>
@@ -51,16 +54,16 @@
               <div class="form__item">
                 <div class="form-label">Date of Birth</div>
                 <div class="form-field">
-                  <select id="day" onmousedown="if(this.options.length>8){this.size=6;}" onchange='this.size=0;'
-                    onblur="this.size=0;">
+                  <select id="day" onmousedown="if(this.options.length>8){this.size=6;this.style.zIndex='50'}"
+                    onchange='this.size=0;' onblur="this.size=0;">
                     <option value="DD" disabled selected></option>
                   </select>
-                  <select id="month" onmousedown="if(this.options.length>8){this.size=6;}" onchange='this.size=0;'
-                    onblur="this.size=0;">
+                  <select id="month" onmousedown="if(this.options.length>8){this.size=6;this.style.zIndex='50'}"
+                    onchange='this.size=0;' onblur="this.size=0;">
                     <option value="M" disabled selected></option>
                   </select>
-                  <select id="year" onmousedown="if(this.options.length>8){this.size=6;}" onchange='this.size=0;'
-                    onblur="this.size=0;">
+                  <select id="year" onmousedown="if(this.options.length>8){this.size=6;this.style.zIndex='50'}"
+                    onchange='this.size=0;' onblur="this.size=0;">
                     <option value="YYYY" disabled selected></option>
                   </select>
                 </div>
@@ -98,6 +101,8 @@
       </div>
     </section>
   </div>
+
+
   <script src="/js/index.js"></script>
 </body>
 
