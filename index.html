@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=initial-scale=1.0">
+  <title>Sign up form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Work+Sans:wght@200;300;400;500&display=swap"
+    rel="stylesheet">
+  <link href="fonts/stylesheet.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <section class="form">
+      <div class="form__title">
+        <h1 class="title">Sign up</h1>
+      </div>
+      <div class="form__inner">
+        <h2 class="form__inner-title">New user? </h2>
+        <p class="form__inner-subtitle">Use the form below to create your account.</p>
+        <div class="sign_in">
+          <form class="form__main" action="#">
+            <div class="form__items">
+              <div class="form__item">
+                <label for="firstName">First Name</label>
+                <input type="text" class="input_style empty_field" id="firstName" name="firstName">
+              </div>
+              <div class="form__item">
+                <label for="lastName">Last Name</label>
+                <input type="text" class="input_style empty_field" id="lastName" name="firstName">
+              </div>
+            </div>
+            <div class="form__items">
+              <div class="form__item form-field">
+                <label for="firstName" class="field-nationality">Nationality</label>
+                <select id="nationality" onmousedown="if(this.options.length>8){this.size=6;}" onchange='this.size=0;'
+                  onblur="this.size=0;">
+                  <option value="---" disabled selected>---</option>
+                </select>
+              </div>
+              <div class="form__item">
+                <label for="email">E-mail</label>
+                <input type="email" class="input_style empty_field" id="email" name="email">
+              </div>
+            </div>
+            <div class="form__items">
+              <div class="form__item">
+                <div class="form-label">Date of Birth</div>
+                <div class="form-field">
+                  <select id="day" onmousedown="if(this.options.length>8){this.size=6;}" onchange='this.size=0;'
+                    onblur="this.size=0;">
+                    <option value="DD" disabled selected></option>
+                  </select>
+                  <select id="month" onmousedown="if(this.options.length>8){this.size=6;}" onchange='this.size=0;'
+                    onblur="this.size=0;">
+                    <option value="M" disabled selected></option>
+                  </select>
+                  <select id="year" onmousedown="if(this.options.length>8){this.size=6;}" onchange='this.size=0;'
+                    onblur="this.size=0;">
+                    <option value="YYYY" disabled selected></option>
+                  </select>
+                </div>
+              </div>
+              <div class="form__item">
+                <div class="form-label">Gender</div>
+                <div class="form-field-radio">
+                  <div class="options__item">
+                    <input type="radio" class="radio_input" id="male" name="gender" value="male">
+                    <label for="male" class="radio_label">Male</label>
+                  </div>
+                  <div class="options__item">
+                    <input type="radio" class="radio_input" id="female" name="gender" value="female">
+                    <label for="female" class="radio_label">Female</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form__items">
+              <div class="form__item">
+                <label for="password">Password</label>
+                <input type="password" class="input_style empty_field" id="password" name="password">
+              </div>
+              <div class="form__item">
+                <label for="passwordConfirmed">Confirm Password</label>
+                <input type="password" class="input_style empty_field" id="passwordConfirmed" name="passwordConfirmed">
+              </div>
+            </div>
+            <div class="form-complete">
+              <p class="content">Have an account? <a href="#" class="login-link">Login</a></p>
+              <button type="submit" id="btn" class="signup_btn">Complete Signup</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="/js/index.js"></script>
+</body>
+
+</html>
