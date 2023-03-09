@@ -1,3 +1,5 @@
+alert("Script")
+
 function fillSelect(field, items) {
 
   items.forEach((el) => {
