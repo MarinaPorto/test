@@ -166,7 +166,8 @@ body {
 .form__items {
   display: flex;
   gap: 14px;
-  margin-bottom: 18px;
+  height: 42px;
+  margin-bottom: 16px;
 }
 
 .form__item {
@@ -203,7 +204,11 @@ body {
 
 .form-field {
   position: relative;
-  height: 40px;
+  height: 52px;
+}
+
+.form-field-selects {
+  position: relative;
 }
 
 select {
@@ -270,7 +275,7 @@ input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 78px;
+  padding-top: 82px;
   font-size: 13px;
 }
 
@@ -332,14 +337,15 @@ input {
   }
   .form__items {
     flex-direction: column;
+    height: auto;
   }
   .input_style,
 #nationality,
 .form__item {
     width: 300px;
   }
-  .form-field {
-    margin-bottom: 16px;
+  .form-field-selects {
+    padding-bottom: 26px;
   }
   #month {
     left: 90px;

@@ -46,14 +46,17 @@
 
               </div>
               <div class="form__item">
-                <label for="email">E-mail</label>
-                <input type="email" class="input_style empty_field" id="email" name="email">
+                <div class="form-field">
+                  <label for="email">E-mail</label>
+                  <input type="email" class="input_style empty_field" id="email" name="email">
+                </div>
+
               </div>
             </div>
             <div class="form__items">
               <div class="form__item">
                 <div class="form-label">Date of Birth</div>
-                <div class="form-field">
+                <div class="form-field-selects">
                   <select id="day" onmousedown="if(this.options.length>8){this.size=6;this.style.zIndex='50'}"
                     onchange='this.size=0;' onblur="this.size=0;">
                     <option value="DD" disabled selected></option>
