@@ -1,0 +1,44 @@
+@keyframes changeVisible {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.field-1 {
+	animation: changeVisible 2s forwards;
+}
+.field-2 {
+	animation: changeVisible 2s forwards 0.5s;
+}
+.field-3 {
+	animation: changeVisible 2s forwards 1s;
+}
+.field-4 {
+	animation: changeVisible 2s forwards 1.5s;
+}
+.field-5 {
+	animation: changeVisible 2s forwards 2s;
+}
+.field-6 {
+	animation: changeVisible 2s forwards 2.5s;
+}
+.field-7 {
+	animation: changeVisible 2s forwards 3s;
+}
+.field-8 {
+	animation: changeVisible 2s forwards 3.5s;
+}
+
+#user-icon,
+#user-icon-bg {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.fill-color path {
+	fill: #f9faff;
+}

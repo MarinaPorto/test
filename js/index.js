@@ -1,7 +1,4 @@
-alert("Script")
-
 function fillSelect(field, items) {
-
   items.forEach((el) => {
     let option = document.createElement("option");
     option.value = el;
@@ -12,7 +9,6 @@ function fillSelect(field, items) {
 
 
 function fillSelectWithNumericData(field, min, max) {
-
   for (var i = min; i <= max; i++) {
     let option = document.createElement("option");
     option.value = i;
@@ -25,7 +21,6 @@ function fillSelectWithNumericData(field, min, max) {
 // Filling out the dropdown list 'nationality'
 
 const nationalityField = document.getElementById("nationality");
-
 const nationality = ["Australian", "Belgian", "Chinese", "German", "Australian", "Belgian", "Chinese", "German"];
 
 fillSelect(nationalityField, nationality);
@@ -33,12 +28,28 @@ fillSelect(nationalityField, nationality);
 // Filling out the dropdown list 'Date of Birth'
 
 const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
 const dayField = document.getElementById("day");
 const monthField = document.getElementById("month");
 const yearField = document.getElementById("year");
-fillSelectWithNumericData(dayField, 1, 31)
 
+
+fillSelectWithNumericData(dayField, 1, 31);
 fillSelect(monthField, month);
+fillSelectWithNumericData(yearField, 1990, 2005);
 
-fillSelectWithNumericData(yearField, 1990, 2005)
+//icon animation
+
+const iconBg = document.getElementById("user-icon-bg");
+
+const showIconFill = () => {
+  iconBg.classList.add("fill-color")
+};
+
+const userIcon = new Vivus(
+  'user-icon',
+  {
+    type: 'sync',
+    duration: 200,
+  }, showIconFill
+
+)

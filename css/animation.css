@@ -1,0 +1,66 @@
+@-webkit-keyframes changeVisible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes changeVisible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.field-1 {
+  -webkit-animation: changeVisible 2s forwards;
+          animation: changeVisible 2s forwards;
+}
+
+.field-2 {
+  -webkit-animation: changeVisible 2s forwards 0.5s;
+          animation: changeVisible 2s forwards 0.5s;
+}
+
+.field-3 {
+  -webkit-animation: changeVisible 2s forwards 1s;
+          animation: changeVisible 2s forwards 1s;
+}
+
+.field-4 {
+  -webkit-animation: changeVisible 2s forwards 1.5s;
+          animation: changeVisible 2s forwards 1.5s;
+}
+
+.field-5 {
+  -webkit-animation: changeVisible 2s forwards 2s;
+          animation: changeVisible 2s forwards 2s;
+}
+
+.field-6 {
+  -webkit-animation: changeVisible 2s forwards 2.5s;
+          animation: changeVisible 2s forwards 2.5s;
+}
+
+.field-7 {
+  -webkit-animation: changeVisible 2s forwards 3s;
+          animation: changeVisible 2s forwards 3s;
+}
+
+.field-8 {
+  -webkit-animation: changeVisible 2s forwards 3.5s;
+          animation: changeVisible 2s forwards 3.5s;
+}
+
+#user-icon,
+#user-icon-bg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.fill-color path {
+  fill: #f9faff;
+}/*# sourceMappingURL=animation.css.map */

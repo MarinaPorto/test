@@ -1,6 +1,8 @@
 //font-family: 'PT Sans', sans-serif;
 //font-family: 'Work Sans', sans-serif;
 
+@import "animation.scss";
+
 $font-worksans: "Work Sans", sans-serif;
 $font-ptsans: "PT Sans", sans-serif;
 
@@ -143,6 +145,9 @@ body {
 		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
+		position: relative;
+		display: flex;
+		flex-direction: column;
 	}
 	&__inner-title {
 		@include title();
@@ -152,6 +157,9 @@ body {
 		@include content();
 		@include text-hidden();
 	}
+	.sign_in {
+		z-index: 5;
+	}
 }
 
 .input_style {
@@ -159,6 +167,7 @@ body {
 	height: 20px;
 	display: block;
 	border: none;
+	background-color: inherit;
 	border-bottom: 1px solid #f2f2f2;
 }
 
@@ -207,7 +216,6 @@ body {
 
 .form__items {
 	display: flex;
-
 	gap: 14px;
 	height: 42px;
 	margin-bottom: 16px;
@@ -217,6 +225,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	width: 234px;
+	opacity: 0;
 }
 
 .form-field-radio {
@@ -260,7 +269,7 @@ select {
 	-moz-appearance: none;
 	appearance: none;
 	cursor: pointer;
-	background-color: $white-color;
+	background-color: inherit;
 	border-bottom: 1px solid #f2f2f2;
 	position: relative;
 	background-image: url(/img/arrow.svg);
@@ -275,7 +284,7 @@ select {
 	width: 234px;
 	z-index: 40;
 	left: 0;
-	bottom: 0;
+	bottom: 3px;
 }
 
 #day {
