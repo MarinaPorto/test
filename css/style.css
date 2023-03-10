@@ -54,6 +54,10 @@
           animation: changeVisible 2s forwards 3.5s;
 }
 
+.form__item {
+  opacity: 1;
+}
+
 #user-icon,
 #user-icon-bg {
   position: absolute;
@@ -62,7 +66,8 @@
 }
 
 .fill-color path {
-  fill: #F9FAFF;
+  fill: #f9faff;
+  stroke: #f9faff;
 }
 
 html {
@@ -284,6 +289,9 @@ body {
 
 .form-field-selects {
   position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 select {
@@ -306,38 +314,82 @@ select {
   color: #111111;
 }
 
-#nationality {
-  position: absolute;
-  width: 234px;
-  z-index: 40;
-  left: 0;
-  bottom: 3px;
+.select {
+  position: relative;
 }
 
-#day {
-  position: absolute;
-  z-index: 40;
-  left: 0;
-  top: 0;
+#day-select {
   width: 56px;
-  margin-right: 8px;
+  margin-right: 6px;
 }
 
-#month {
-  position: absolute;
-  z-index: 40;
-  left: 60px;
-  top: 0;
+#month-select {
   width: 91px;
-  margin-right: 8px;
+  margin-right: 6px;
 }
 
-#year {
-  position: absolute;
-  z-index: 40;
-  right: 0;
-  top: 0;
+#year-select {
   width: 68px;
+}
+
+.select.active .select__body {
+  display: block;
+}
+
+.select__header {
+  display: flex;
+  height: 22px;
+}
+
+.select__current {
+  width: 100%;
+  cursor: pointer;
+  background-color: inherit;
+  border-bottom: 1px solid #f2f2f2;
+  position: relative;
+  background-image: url(/img/arrow.svg);
+  background-repeat: no-repeat;
+  background-position: right top 6px;
+  padding: 0;
+  font-size: 14px;
+  line-height: 16px;
+  color: #111111;
+}
+
+.select__body {
+  display: none;
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  top: 110%;
+  background-color: #fff;
+  height: 120px;
+  overflow-y: scroll;
+  width: 100%;
+  scrollbar-width: thin;
+  border: 1px solid #f2f2f2;
+  border-top: none;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f2f2f2;
+}
+
+.select__item {
+  font-size: 14px;
+  line-height: 16px;
+  color: #111111;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.select__item:hover {
+  background-color: #f2f2f2;
 }
 
 input {
@@ -396,15 +448,6 @@ input {
   .form__item {
     width: 200px;
   }
-  #year {
-    width: 50px;
-  }
-  #day {
-    width: 40px;
-  }
-  #month {
-    left: 46px;
-  }
 }
 @media screen and (max-width: 600px) {
   .wrapper {
@@ -421,16 +464,6 @@ input {
   }
   .form-field-selects {
     padding-bottom: 26px;
-  }
-  #month {
-    left: 90px;
-    width: 94px;
-  }
-  #year {
-    width: 94px;
-  }
-  #day {
-    width: 64px;
   }
   .form-complete {
     flex-direction: column;
@@ -449,16 +482,6 @@ input {
 #nationality,
 .form__item {
     width: 240px;
-  }
-  #day {
-    width: 40px;
-  }
-  #month {
-    left: 60px;
-    width: 90px;
-  }
-  #year {
-    width: 60px;
   }
   .form__inner-subtitle {
     white-space: normal;

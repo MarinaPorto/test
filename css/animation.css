@@ -54,6 +54,10 @@
           animation: changeVisible 2s forwards 3.5s;
 }
 
+.form__item {
+  opacity: 1;
+}
+
 #user-icon,
 #user-icon-bg {
   position: absolute;
@@ -63,4 +67,5 @@
 
 .fill-color path {
   fill: #f9faff;
+  stroke: #f9faff;
 }/*# sourceMappingURL=animation.css.map */

@@ -38,37 +38,47 @@
               <div class="form__item field-3">
                 <div class="form-field">
                   <label for="firstName" class="field-nationality">Nationality</label>
-                  <select id="nationality" onmousedown="if(this.options.length>8){this.size=6;this.style.zIndex='50'}"
-                    onchange='this.size=0;' onblur="this.size=0;">
-                    <option value="---" disabled selected>---</option>
-                  </select>
+                  <div class="select" id="nationality-select">
+                    <div class="select__header">
+                      <span class="select__current"></span>
+                    </div>
+                    <div class="select__body" id="select-nationality-body">
+                    </div>
+                  </div>
                 </div>
-
               </div>
               <div class="form__item field-4">
                 <div class="form-field">
                   <label for="email">E-mail</label>
                   <input type="email" class="input_style empty_field" id="email" name="email">
                 </div>
-
               </div>
             </div>
             <div class="form__items">
               <div class="form__item field-5">
                 <div class="form-label">Date of Birth</div>
                 <div class="form-field-selects">
-                  <select id="day" onmousedown="if(this.options.length>8){this.size=6;this.style.zIndex='50'}"
-                    onchange='this.size=0;' onblur="this.size=0;">
-                    <option value="DD" disabled selected></option>
-                  </select>
-                  <select id="month" onmousedown="if(this.options.length>8){this.size=6;this.style.zIndex='50'}"
-                    onchange='this.size=0;' onblur="this.size=0;">
-                    <option value="M" disabled selected></option>
-                  </select>
-                  <select id="year" onmousedown="if(this.options.length>8){this.size=6;this.style.zIndex='50'}"
-                    onchange='this.size=0;' onblur="this.size=0;">
-                    <option value="YYYY" disabled selected></option>
-                  </select>
+                  <div class="select" id="day-select">
+                    <div class="select__header">
+                      <span class="select__current"></span>
+                    </div>
+                    <div class="select__body" id="select-day-body">
+                    </div>
+                  </div>
+                  <div class="select" id="month-select">
+                    <div class="select__header">
+                      <span class="select__current"></span>
+                    </div>
+                    <div class="select__body" id="select-month-body">
+                    </div>
+                  </div>
+                  <div class="select" id="year-select">
+                    <div class="select__header">
+                      <span class="select__current"></span>
+                    </div>
+                    <div class="select__body" id="select-year-body">
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="form__item field-6">
