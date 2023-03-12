@@ -3,7 +3,7 @@
     opacity: 0;
   }
   100% {
-    opacity: 1;
+    opacity: 0.98;
   }
 }
 @keyframes changeVisible {
@@ -11,7 +11,23 @@
     opacity: 0;
   }
   100% {
-    opacity: 1;
+    opacity: 0.98;
+  }
+}
+@-webkit-keyframes changeVisibleSelect {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+@keyframes changeVisibleSelect {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
   }
 }
 .field-1 {
@@ -54,8 +70,24 @@
           animation: changeVisible 2s forwards 3.5s;
 }
 
-.form__item {
-  opacity: 1;
+#nationality-select {
+  -webkit-animation: changeVisibleSelect 2s forwards 1s;
+          animation: changeVisibleSelect 2s forwards 1s;
+}
+
+#day-select {
+  -webkit-animation: changeVisibleSelect 2s forwards 2s;
+          animation: changeVisibleSelect 2s forwards 2s;
+}
+
+#month-select {
+  -webkit-animation: changeVisibleSelect 2s forwards 2s;
+          animation: changeVisibleSelect 2s forwards 2s;
+}
+
+#year-select {
+  -webkit-animation: changeVisibleSelect 2s forwards 2s;
+          animation: changeVisibleSelect 2s forwards 2s;
 }
 
 #user-icon,
@@ -247,6 +279,7 @@ body {
   gap: 14px;
   height: 42px;
   margin-bottom: 16px;
+  position: relative;
 }
 
 .form__item {
@@ -254,6 +287,11 @@ body {
   flex-direction: column;
   width: 234px;
   opacity: 0;
+}
+
+.form__item.opacity {
+  opacity: 1;
+  position: relative;
 }
 
 .form-field-radio {
@@ -315,25 +353,35 @@ select {
 }
 
 .select {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 234px;
+  height: 20px;
+  position: absolute;
+  top: 20px;
+}
+
+#nationality-select {
+  visibility: hidden;
 }
 
 #day-select {
   width: 56px;
   margin-right: 6px;
+  visibility: hidden;
 }
 
 #month-select {
   width: 91px;
   margin-right: 6px;
+  left: 64px;
+  visibility: hidden;
 }
 
 #year-select {
   width: 68px;
-}
-
-.select.active .select__body {
-  display: block;
+  left: 166px;
+  visibility: hidden;
 }
 
 .select__header {
@@ -359,7 +407,7 @@ select {
 .select__body {
   display: none;
   position: absolute;
-  z-index: 5;
+  z-index: 50;
   left: 0;
   right: 0;
   top: 110%;
@@ -396,6 +444,10 @@ input {
   font-size: 14px;
   line-height: 16px;
   color: #111111;
+}
+
+.select.active .select__body {
+  display: block;
 }
 
 .form-complete {
@@ -448,6 +500,22 @@ input {
   .form__item {
     width: 200px;
   }
+  #day-select {
+    width: 40px;
+    margin-right: 6px;
+  }
+  #month-select {
+    width: 91px;
+    margin-right: 6px;
+    left: 50px;
+  }
+  #year-select {
+    width: 50px;
+    left: 150px;
+  }
+  .select {
+    width: 200px;
+  }
 }
 @media screen and (max-width: 600px) {
   .wrapper {
@@ -459,7 +527,8 @@ input {
   }
   .input_style,
 #nationality,
-.form__item {
+.form__item,
+.select {
     width: 300px;
   }
   .form-field-selects {
@@ -473,6 +542,9 @@ input {
   .form-complete .signup_btn {
     order: -1;
   }
+  .field-6 {
+    margin-top: 20px;
+  }
 }
 @media screen and (max-width: 520px) {
   .wrapper {
@@ -485,6 +557,22 @@ input {
   }
   .form__inner-subtitle {
     white-space: normal;
+  }
+  #day-select {
+    width: 40px;
+    margin-right: 6px;
+  }
+  #month-select {
+    width: 91px;
+    margin-right: 6px;
+    left: 74px;
+  }
+  #year-select {
+    width: 50px;
+    left: 190px;
+  }
+  .select {
+    width: 240px;
   }
 }
 @media screen and (max-width: 440px) {

@@ -3,7 +3,7 @@
     opacity: 0;
   }
   100% {
-    opacity: 1;
+    opacity: 0.98;
   }
 }
 @keyframes changeVisible {
@@ -11,7 +11,23 @@
     opacity: 0;
   }
   100% {
-    opacity: 1;
+    opacity: 0.98;
+  }
+}
+@-webkit-keyframes changeVisibleSelect {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+@keyframes changeVisibleSelect {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
   }
 }
 .field-1 {
@@ -54,8 +70,24 @@
           animation: changeVisible 2s forwards 3.5s;
 }
 
-.form__item {
-  opacity: 1;
+#nationality-select {
+  -webkit-animation: changeVisibleSelect 3s forwards 1s;
+          animation: changeVisibleSelect 3s forwards 1s;
+}
+
+#day-select {
+  -webkit-animation: changeVisibleSelect 3s forwards 2s;
+          animation: changeVisibleSelect 3s forwards 2s;
+}
+
+#month-select {
+  -webkit-animation: changeVisibleSelect 3s forwards 2s;
+          animation: changeVisibleSelect 3s forwards 2s;
+}
+
+#year-select {
+  -webkit-animation: changeVisibleSelect 3s forwards 2s;
+          animation: changeVisibleSelect 3s forwards 2s;
 }
 
 #user-icon,

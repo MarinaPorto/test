@@ -3,7 +3,16 @@
 		opacity: 0;
 	}
 	100% {
-		opacity: 1;
+		opacity: 0.98;
+	}
+}
+
+@keyframes changeVisibleSelect {
+	0% {
+		visibility: hidden;
+	}
+	100% {
+		visibility: visible;
 	}
 }
 
@@ -32,11 +41,20 @@
 	animation: changeVisible 2s forwards 3.5s;
 }
 
-
-.form__item {
-  opacity: 1;
+#nationality-select {
+	animation: changeVisibleSelect 3s forwards 1s;
 }
 
+#day-select {
+	animation: changeVisibleSelect 3s forwards 2s;
+}
+#month-select {
+	animation: changeVisibleSelect 3s forwards 2s;
+}
+
+#year-select {
+	animation: changeVisibleSelect 3s forwards 2s;
+}
 
 #user-icon,
 #user-icon-bg {
@@ -47,5 +65,5 @@
 
 .fill-color path {
 	fill: #f9faff;
-  stroke: #f9faff;
+	stroke: #f9faff;
 }

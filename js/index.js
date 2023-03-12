@@ -59,10 +59,16 @@ const userIcon = new Vivus(
 let select = function () {
   let selectHeader = document.querySelectorAll('.select__header');
   let selectItem = document.querySelectorAll('.select__item');
+  let formItem = document.querySelectorAll('.form__item');
 
   selectHeader.forEach(el => {
     el.addEventListener('click', function () {
       this.parentElement.classList.toggle('active')
+      console.log(this.parentElement)
+      // formItem.forEach(item=> {
+      //   // console.log(item)
+      //   // item.classList.remove('form__item')
+      // })
     })
   })
 

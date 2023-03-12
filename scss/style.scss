@@ -219,6 +219,7 @@ body {
 	gap: 14px;
 	height: 42px;
 	margin-bottom: 16px;
+	position: relative;
 }
 
 .form__item {
@@ -228,6 +229,10 @@ body {
 	opacity: 0;
 }
 
+.form__item.opacity {
+	opacity: 1;
+	position: relative;
+}
 .form-field-radio {
 	display: flex;
 	gap: 20px;
@@ -275,7 +280,7 @@ select {
 	background-color: inherit;
 	border-bottom: 1px solid #f2f2f2;
 	position: relative;
-	background-image: url(/img/arrow.svg);
+	background-image: url(img/arrow.svg);
 	background-repeat: no-repeat;
 	background-position: right top 6px;
 	padding: 0;
@@ -283,24 +288,34 @@ select {
 }
 
 .select {
-	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 234px;
+	height: 20px;
+	position: absolute;
+	top: 20px;
+}
+
+#nationality-select {
+	visibility: hidden;
 }
 
 #day-select {
 	width: 56px;
 	margin-right: 6px;
+	visibility: hidden;
 }
 #month-select {
 	width: 91px;
 	margin-right: 6px;
+	left: 64px;
+	visibility: hidden;
 }
 
 #year-select {
 	width: 68px;
-}
-
-.select.active .select__body {
-	display: block;
+	left: 166px;
+	visibility: hidden;
 }
 
 .select__header {
@@ -324,7 +339,7 @@ select {
 .select__body {
 	display: none;
 	position: absolute;
-	z-index: 5;
+	z-index: 50;
 	left: 0;
 	right: 0;
 	top: 110%;
@@ -355,6 +370,10 @@ select {
 
 input {
 	@include text-style();
+}
+
+.select.active .select__body {
+	display: block;
 }
 
 //btn
@@ -407,6 +426,23 @@ input {
 	.form__item {
 		width: 200px;
 	}
+	#day-select {
+		width: 40px;
+		margin-right: 6px;
+	}
+	#month-select {
+		width: 91px;
+		margin-right: 6px;
+		left: 50px;
+	}
+
+	#year-select {
+		width: 50px;
+		left: 150px;
+	}
+	.select {
+		width: 200px;
+	}
 }
 
 @media screen and (max-width: 600px) {
@@ -419,7 +455,8 @@ input {
 	}
 	.input_style,
 	#nationality,
-	.form__item {
+	.form__item,
+	.select {
 		width: 300px;
 	}
 	.form-field-selects {
@@ -432,6 +469,9 @@ input {
 		.signup_btn {
 			order: -1;
 		}
+	}
+	.field-6 {
+		margin-top: 20px;
 	}
 }
 
@@ -446,6 +486,23 @@ input {
 	}
 	.form__inner-subtitle {
 		white-space: normal;
+	}
+	#day-select {
+		width: 40px;
+		margin-right: 6px;
+	}
+	#month-select {
+		width: 91px;
+		margin-right: 6px;
+		left: 74px;
+	}
+
+	#year-select {
+		width: 50px;
+		left: 190px;
+	}
+	.select {
+		width: 240px;
 	}
 }
 
