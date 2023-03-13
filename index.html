@@ -23,72 +23,76 @@
         <h2 class="form__inner-title">New user? </h2>
         <p class="form__inner-subtitle">Use the form below to create your account.</p>
         <div class="sign_in">
-          <form class="form__main" action="#">
+          <form class="form__main" action="#" id="form__main">
             <div class="form__items">
               <div class="form__item field-1">
                 <label for="firstName">First Name</label>
-                <input type="text" class="input_style empty_field" id="firstName" name="firstName">
+                <input type="text" class="input_style req_field" id="firstName" name="firstName">
               </div>
               <div class="form__item field-2">
                 <label for="lastName">Last Name</label>
-                <input type="text" class="input_style empty_field" id="lastName" name="firstName">
+                <input type="text" class="input_style req_field" id="lastName" name="lastName">
               </div>
             </div>
             <div class="form__items">
               <div class="form__item field-3">
                 <div class="form-field">
                   <label for="firstName" class="field-nationality">Nationality</label>
-
                 </div>
               </div>
               <div class="select" id="nationality-select">
                 <div class="select__header">
-                  <span class="select__current"></span>
+                  <input class="select__current req_field input_style-select" id="nationality-input"></input>
                 </div>
                 <div class="select__body" id="select-nationality-body"></div>
               </div>
-
               <div class="form__item field-4">
                 <div class="form-field">
-                  <label for="email">E-mail</label>
-                  <input type="email" class="input_style empty_field" id="email" name="email">
+                  <div class="filed-title-email">
+                    <label for="email">E-mail</label>
+                  </div>
+                  <input type="email" class="input_style req_field" id="email" name="email">
                 </div>
               </div>
             </div>
             <div class="form__items">
               <div class="form__item field-5">
-                <div class="form-label">Date of Birth</div>
+                <div class="filed-title-date">
+                  <div class="form-label">Date of Birth</div>
+                </div>
               </div>
               <div class="select" id="day-select">
                 <div class="select__header">
-                  <span class="select__current"></span>
+                  <input class="select__current req_field input_style-select" id="day"></input>
                 </div>
                 <div class="select__body" id="select-day-body">
                 </div>
               </div>
               <div class="select" id="month-select">
                 <div class="select__header">
-                  <span class="select__current"></span>
+                  <input class="select__current req_field input_style-select" id="month"></input>
                 </div>
                 <div class="select__body" id="select-month-body">
                 </div>
               </div>
               <div class="select" id="year-select">
                 <div class="select__header">
-                  <span class="select__current"></span>
+                  <input class="select__current req_field input_style-select" id="year"></input>
                 </div>
                 <div class="select__body" id="select-year-body">
                 </div>
               </div>
               <div class="form__item field-6">
-                <div class="form-label">Gender</div>
+                <div class="filed-title-gender">
+                  <div class="form-label gender-title">Gender</div>
+                </div>
                 <div class="form-field-radio">
                   <div class="options__item">
                     <input type="radio" class="radio_input" id="male" name="gender" value="male">
                     <label for="male" class="radio_label">Male</label>
                   </div>
                   <div class="options__item">
-                    <input type="radio" class="radio_input" id="female" name="gender" value="female">
+                    <input type="radio" class="radio_input " id="female" name="gender" value="female">
                     <label for="female" class="radio_label">Female</label>
                   </div>
                 </div>
@@ -96,14 +100,21 @@
             </div>
             <div class="form__items ">
               <div class="form__item field-7">
-                <label for="password">Password</label>
-                <input type="password" class="input_style empty_field" id="password" name="password">
+                <div class="filed-title-password">
+                  <label for="password">Password</label>
+                </div>
+                <input type="password" class="input_style req_field" id="password" name="password">
               </div>
               <div class="form__item field-8">
-                <label for="passwordConfirmed">Confirm Password</label>
-                <input type="password" class="input_style empty_field" id="passwordConfirmed" name="passwordConfirmed">
+                <div class="filed-title-password-confirmed">
+                  <label for="passwordConfirmed">Confirm Password</label>
+                </div>
+                <input type="password" class="input_style req_field" id="passwordConfirmed" name="passwordConfirmed">
               </div>
             </div>
+            <div class="warning error">Password must contain numbers, uppercase and lowercase letters, length 8 and more
+            </div>
+            <div class="warning-confirmed error">Passwords don't match </div>
             <div class="form-complete">
               <p class="content">Have an account? <a href="#" class="login-link">Login</a></p>
               <button type="submit" id="btn" class="signup_btn">Complete Signup</button>

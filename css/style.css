@@ -71,23 +71,23 @@
 }
 
 #nationality-select {
-  -webkit-animation: changeVisibleSelect 2s forwards 1s;
-          animation: changeVisibleSelect 2s forwards 1s;
+  -webkit-animation: changeVisibleSelect 3s forwards 1s;
+          animation: changeVisibleSelect 3s forwards 1s;
 }
 
 #day-select {
-  -webkit-animation: changeVisibleSelect 2s forwards 2s;
-          animation: changeVisibleSelect 2s forwards 2s;
+  -webkit-animation: changeVisibleSelect 3s forwards 2s;
+          animation: changeVisibleSelect 3s forwards 2s;
 }
 
 #month-select {
-  -webkit-animation: changeVisibleSelect 2s forwards 2s;
-          animation: changeVisibleSelect 2s forwards 2s;
+  -webkit-animation: changeVisibleSelect 3s forwards 2s;
+          animation: changeVisibleSelect 3s forwards 2s;
 }
 
 #year-select {
-  -webkit-animation: changeVisibleSelect 2s forwards 2s;
-          animation: changeVisibleSelect 2s forwards 2s;
+  -webkit-animation: changeVisibleSelect 3s forwards 2s;
+          animation: changeVisibleSelect 3s forwards 2s;
 }
 
 #user-icon,
@@ -100,6 +100,58 @@
 .fill-color path {
   fill: #f9faff;
   stroke: #f9faff;
+}
+
+@-webkit-keyframes trambling-animation {
+  0%, 50%, 100% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+  }
+  10%, 30% {
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+  }
+  20%, 40% {
+    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+  }
+}
+
+@keyframes trambling-animation {
+  0%, 50%, 100% {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+  }
+  10%, 30% {
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+  }
+  20%, 40% {
+    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+  }
+}
+.btn_animation {
+  -webkit-animation: trambling-animation 1.2s ease-in-out 0s forwards;
+          animation: trambling-animation 1.2s ease-in-out 0s forwards;
 }
 
 html {
@@ -231,6 +283,43 @@ body {
   border: none;
   background-color: inherit;
   border-bottom: 1px solid #f2f2f2;
+}
+
+.input_style-select {
+  height: 20px;
+  display: block;
+  border: none;
+  background-color: inherit;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.filed-title-gender,
+.filed-title-email,
+.filed-title-password,
+.filed-title-password-confirmed,
+.filed-title-date {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.error {
+  font-size: 12px;
+  line-height: 14px;
+  color: #ff2222;
+  margin-bottom: 6px;
+}
+
+.warning {
+  display: none;
+  white-space: normal;
+  max-width: 234px;
+}
+
+.warning-confirmed {
+  display: none;
+  white-space: normal;
+  max-width: 234px;
 }
 
 .options__item input[type=radio] {
@@ -475,6 +564,10 @@ input {
 }
 .signup_btn:active {
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.empty_field {
+  border-bottom: 2px solid #ff2222;
 }
 
 .login-link {
