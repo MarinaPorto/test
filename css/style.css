@@ -102,7 +102,7 @@
   stroke: #f9faff;
 }
 
-@-webkit-keyframes trambling-animation {
+@-webkit-keyframes btn-animation {
   0%, 50%, 100% {
     transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
@@ -126,7 +126,7 @@
   }
 }
 
-@keyframes trambling-animation {
+@keyframes btn-animation {
   0%, 50%, 100% {
     transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
@@ -150,8 +150,8 @@
   }
 }
 .btn_animation {
-  -webkit-animation: trambling-animation 1.2s ease-in-out 0s forwards;
-          animation: trambling-animation 1.2s ease-in-out 0s forwards;
+  -webkit-animation: btn-animation 1.2s ease-in-out 0s forwards;
+          animation: btn-animation 1.2s ease-in-out 0s forwards;
 }
 
 html {
@@ -241,7 +241,8 @@ body {
   right: -47px;
   transform: rotate(-90deg);
 }
-.form__inner {
+.form__inner,
+.form .popup {
   padding: 39px 22px 34px;
   background-color: #fff;
   max-width: 528px;
@@ -274,6 +275,14 @@ body {
 }
 .form .sign_in {
   z-index: 5;
+}
+
+.form .popup-title {
+  margin: 178px 300px 11px 43px;
+}
+.form .popup-subtitle {
+  margin-left: 43px;
+  margin-bottom: 152px;
 }
 
 .input_style {
@@ -609,6 +618,9 @@ input {
   .select {
     width: 200px;
   }
+  .form .popup-title {
+    margin: 178px 100px 11px 43px;
+  }
 }
 @media screen and (max-width: 600px) {
   .wrapper {
@@ -678,7 +690,8 @@ input {
   .form__title {
     min-width: 60px;
   }
-  .form__inner {
+  .form__inner,
+.form .popup {
     padding: 20px 10px 20px;
   }
   .form-complete {

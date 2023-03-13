@@ -138,7 +138,8 @@ body {
 		right: -47px;
 		transform: rotate(-90deg);
 	}
-	&__inner {
+	&__inner,
+	.popup {
 		padding: 39px 22px 34px;
 		background-color: $white-color;
 		max-width: 528px;
@@ -159,6 +160,16 @@ body {
 	}
 	.sign_in {
 		z-index: 5;
+	}
+}
+
+.form {
+	.popup-title {
+		margin: 178px 300px 11px 43px;
+	}
+	.popup-subtitle {
+		margin-left: 43px;
+    margin-bottom: 152px;
 	}
 }
 
@@ -486,6 +497,13 @@ input {
 	.select {
 		width: 200px;
 	}
+  .form {
+    .popup-title {
+      margin: 178px 100px 11px 43px;
+    }
+ 
+  }
+  
 }
 
 @media screen and (max-width: 600px) {
@@ -558,7 +576,8 @@ input {
 		&__title {
 			min-width: 60px;
 		}
-		&__inner {
+		&__inner,
+		.popup {
 			padding: 20px 10px 20px;
 		}
 		&-complete {

@@ -87,20 +87,17 @@ select();
 
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.querySelector(".form__main");
-
-  let userName = document.getElementById('firstName');
-  let userSurname = document.getElementById('lastName');
-  let userNationality = document.getElementById('nationality-input');
   let userEmail = document.getElementById('email');
   let userPassword = document.getElementById('password');
   let userPasswordConfirmed = document.getElementById('passwordConfirmed');
   let btnSignUp = document.getElementById("btn");
-  let btnClear = document.getElementById("clear");
   let radioBtns = document.getElementsByName('gender');
   let gender = "";
   let emptyFields = document.querySelectorAll('.req_field');
   let selectItems = document.querySelectorAll('.select__item');
+  const formInner = document.querySelector('.form__inner');
 
+  let registered = '<h2 class="form__inner-title popup-title">Thank You!</h2>   <p class="form__inner-subtitle popup-subtitle">you registered!</p>   <p class="content popup-content">Have an account? <a href="#" class="login-link">Login</a></p>';
   const EMAIL_REGEXP = /(.+)@(.+){2,}\.(.+){2,}/;
   const PASSWORD_REGEXP = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}/g;
   let isValidFields = true;
@@ -112,19 +109,37 @@ document.addEventListener('DOMContentLoaded', function () {
     field.append(error)
   }
 
-
   function removeErrorMessage(field) {
     if (field.querySelector('.error')) {
       field.querySelector('.error').remove()
     }
   }
 
+  form.addEventListener('submit', sendFormReset);
 
-  form.addEventListener('submit', sendForm);
+  function sendFormReset(e) {
+    e.preventDefault()
+  }
 
-  async function sendForm(e) {
-
-    e.preventDefault();
+  async function sendForm() {
+    let response = await fetch('dummy_data/server-ok.json');
+    if (response.ok) {
+      let result = await response.json()
+      if (result[0].message === "ok") {
+        form.reset();
+        if (document.querySelector('.error')) {
+          document.querySelector('.error').remove()
+        }
+        formInner.innerHTML = registered
+      } else {
+        btnSignUp.classList.add('btn_animation')
+        btnSignUp.addEventListener("animationend", removeBtnAnimation, false);
+      }
+    }
+    else {
+      btnSignUp.classList.add('btn_animation')
+      btnSignUp.addEventListener("animationend", removeBtnAnimation, false);
+    }
   }
 
   function checkGender() {
@@ -236,9 +251,7 @@ document.addEventListener('DOMContentLoaded', function () {
     checkPasswordConfirmed()
     checkDate()
     if (isValidFields) {
-    } else {
-      btnSignUp.classList.add('btn_animation')
-      btnSignUp.addEventListener("animationend", removeBtnAnimation, false);
+      sendForm()
     }
   })
 
