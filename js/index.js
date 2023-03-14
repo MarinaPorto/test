@@ -97,7 +97,10 @@ document.addEventListener('DOMContentLoaded', function () {
   let selectItems = document.querySelectorAll('.select__item');
   const formInner = document.querySelector('.form__inner');
 
-  let registered = '<h2 class="form__inner-title popup-title">Thank You!</h2>   <p class="form__inner-subtitle popup-subtitle">you registered!</p>   <p class="content popup-content">Have an account? <a href="#" class="login-link">Login</a></p>';
+  let registered = `<h2 class="form__inner-title popup-title">Thank You!</h2>   
+  <p class="form__inner-subtitle popup-subtitle">you registered!</p>  
+  <p class="content popup-content">Have an account? 
+  <a href="#" class="login-link">Login</a></p>`;
   const EMAIL_REGEXP = /(.+)@(.+){2,}\.(.+){2,}/;
   const PASSWORD_REGEXP = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}/g;
   let isValidFields = true;
@@ -164,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 
   function checkEmptyFields() {
-    emptyFields.forEach((el, index) => {
+    emptyFields.forEach((el) => {
       if (el.value === "" || el.value == undefined) {
         el.classList.add('empty_field')
         isValidFields = false;
@@ -175,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 
-  userEmail.addEventListener("focusout", isEmailValid);
+  userEmail.addEventListener("focusout", isEmailValid());
 
   function isEmailValid() {
     const errorFieldEmail = document.querySelector('.filed-title-email');
@@ -184,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function () {
     } else {
       removeErrorMessage(errorFieldEmail);
       addErrorMessage(errorFieldEmail, "Invalid email");
-      isValidFields = false;;
+      isValidFields = false;
     }
   }
 

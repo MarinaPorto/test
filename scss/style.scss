@@ -169,7 +169,7 @@ body {
 	}
 	.popup-subtitle {
 		margin-left: 43px;
-    margin-bottom: 152px;
+		margin-bottom: 152px;
 	}
 }
 
@@ -377,7 +377,7 @@ select {
 	background-color: inherit;
 	border-bottom: 1px solid #f2f2f2;
 	position: relative;
-	background-image: url(/img/arrow.svg);
+	background-image: url(../img/arrow.svg);
 	background-repeat: no-repeat;
 	background-position: right top 6px;
 	padding: 0;
@@ -458,7 +458,6 @@ input {
 
 .login-link {
 	color: $actient-color;
-
 	line-height: 15px;
 	text-decoration: underline;
 	&:hover {
@@ -497,13 +496,11 @@ input {
 	.select {
 		width: 200px;
 	}
-  .form {
-    .popup-title {
-      margin: 178px 100px 11px 43px;
-    }
- 
-  }
-  
+	.form {
+		.popup-title {
+			margin: 178px 180px 11px 43px;
+		}
+	}
 }
 
 @media screen and (max-width: 600px) {
