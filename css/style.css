@@ -619,7 +619,7 @@ input {
     width: 200px;
   }
   .form .popup-title {
-    margin: 178px 180px 11px 43px;
+    margin: 178px 120px 11px 43px;
   }
 }
 @media screen and (max-width: 600px) {
