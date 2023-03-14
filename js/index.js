@@ -178,7 +178,6 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 
-  userEmail.addEventListener("focusout", isEmailValid());
 
   function isEmailValid() {
     const errorFieldEmail = document.querySelector('.filed-title-email');
@@ -247,12 +246,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   btnSignUp.addEventListener('click', () => {
     isValidFields = true;
-    checkGender()
-    checkEmptyFields()
-    isEmailValid()
-    isPasswordValid()
-    checkPasswordConfirmed()
-    checkDate()
+    checkGender();
+    checkEmptyFields();
+    isEmailValid();
+    isPasswordValid();
+    checkPasswordConfirmed();
+    checkDate();
     if (isValidFields) {
       sendForm()
     }
